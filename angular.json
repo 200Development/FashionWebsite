@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "FashionWebsite"
+    }
+  },
+  "defaultProject": "FashionWebsite",
+  "cli": {
+    "analytics": false
+  }
 }

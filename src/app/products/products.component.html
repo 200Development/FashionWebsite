@@ -1,0 +1,38 @@
+<app-navigation></app-navigation>
+
+<section class="py-5">
+  <div class="container">
+    <h1>Products</h1>
+    <p class="lead">Products tag line.</p>
+    <div class="card-deck">
+      <div class="sales-items" *ngFor="let product of products">
+        <div class="card" style="width: 20rem; padding: 6px; margin: 12px">
+          <img class="card-img-top" [src]="product.imageUrl" [alt]="product.name">
+
+          <div class="card-body">
+
+            <h3 class="card-title">
+              {{ product.name }}
+            </h3>
+
+            <p *ngIf="product.description" class="card-text">
+              Description: {{ product.description }}
+            </p>
+
+            <p *ngIf="product.price" class="card-text">
+              Price: {{ product.price }}
+            </p>
+
+            <a>Details</a>
+
+            <button (click)="buyProduct()">
+              Buy
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

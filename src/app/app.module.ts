@@ -4,14 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { UpholsterySalesComponent } from './upholstery-sales/upholstery-sales.component';
+import { ProductsComponent } from './products/products.component';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    UpholsterySalesComponent,
+    ProductsComponent,
     HomeComponent
   ],
   imports: [

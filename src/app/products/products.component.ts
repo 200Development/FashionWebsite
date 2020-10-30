@@ -10,13 +10,17 @@ import { ProductService } from './products.service';
 export class ProductsComponent implements OnInit {
 
   products: IProduct[];
-  
+  errorMessage: string;
+    
   constructor(private productService: ProductService) {
 
   }  
 
   ngOnInit(): void {
-    this.products = this.productService.getProducts();
+    this.productService.getProducts().subscribe({
+      next: products => this.products = products,
+      error: err => this.errorMessage = err
+    });
   }
 
   buyProducts(): void {

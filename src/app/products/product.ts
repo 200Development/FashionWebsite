@@ -3,5 +3,5 @@ export interface IProduct {
     description: string;
     price: number;
     imageUrl: string;
-    inventory: number;
+    availableInventory: number;
 }

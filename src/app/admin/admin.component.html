@@ -1,5 +1,39 @@
 <app-navigation></app-navigation>
 
-<div class="container">
-    
-</div>
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Left Column -->
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 style="float: left; text-align: center;">Add Product</h2>
+                    </div>
+                    <div class="card-body">
+
+                        <label>Name:</label>
+                        <input type="text" [(ngModel)]="productName" style="float: right">
+
+                        <label>Description:</label>
+                        <input type="text" [(ngModel)]="productDescription" style="float: right">
+
+                        <label>Price:</label>
+                        <input type="number" [(ngModel)]="productPrice" style="float: right">
+
+                        <label>Available Inventory:</label>
+                        <input type="text" [(ngModel)]="productAvailableInventory" style="float: right; width: 150px;">
+
+                        <button class="btn btn-sm btn-primary" (click)="saveNewProduct()">Save</button>
+                    </div>
+                </div>
+
+                <!-- End Left Column -->
+            </div>
+            <!-- Right Column -->
+            <div class="col-8">
+
+            <!-- End Right Column -->
+            </div>
+        </div>
+    </div>
+</section>

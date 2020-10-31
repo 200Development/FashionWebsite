@@ -14,6 +14,9 @@ import { NavigationModule } from '../navigation/navigation.module';
     SharedModule,
     AdminRoutingModule,
     NavigationModule
+  ],
+  exports: [
+    AdminComponent
   ]
 })
 export class AdminModule { }

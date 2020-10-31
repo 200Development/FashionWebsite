@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { IProduct } from './product';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
@@ -10,6 +10,11 @@ import { catchError, tap } from 'rxjs/operators';
 export class ProductService {
 
   private productUrl = 'https://localhost:44378/products';
+  private httpOptions = {
+    headers: new HttpHeaders({
+      "Content-Type": "application/json"
+    })
+  }
 
   constructor(private http: HttpClient) { }
 
@@ -18,6 +23,12 @@ export class ProductService {
     return this.http.get<IProduct[]>(this.productUrl).pipe(
       catchError(this.handleError)
     );
+  }
+
+  addProduct(product: IProduct): Observable<IProduct> {
+    return this.http.post<IProduct>(this.productUrl, product, this.httpOptions).pipe(
+      catchError(this.handleError)
+    )
   }
 
   private handleError(err: HttpErrorResponse) {

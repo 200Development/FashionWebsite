@@ -4,4 +4,5 @@ export interface IProduct {
     price: number;
     imageUrl: string;
     availableInventory: number;
+    active: boolean;
 }

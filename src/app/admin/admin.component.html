@@ -26,12 +26,32 @@
                         <button class="btn btn-sm btn-primary" (click)="saveNewProduct()">Save</button>
                     </div>
                 </div>
-
+                <div class="card" style="height: 400px; overflow-y: auto;">
+                    <div class="card-header">
+                        Products
+                    </div>
+                    <div class="card-body">
+                        <div class="card-deck" *ngFor="let product of products">
+                            <div class="card" style="margin: 4px 0 0 0; padding: 4px">
+                                <div class="card-header">
+                                    <h4>{{product.name}}</h4>
+                                    <div>
+                                        <input type="checkbox">
+                                        Active?
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6>Available Inventory: <span class="badge">{{product.availableInventory}}</span></h6>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- End Left Column -->
             </div>
             <!-- Right Column -->
             <div class="col-8">
-
+                
             <!-- End Right Column -->
             </div>
         </div>

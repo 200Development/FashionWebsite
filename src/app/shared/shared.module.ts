@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { GoogleChartsModule } from 'angular-google-charts';
 
 
 
@@ -14,14 +15,16 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     RouterModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    GoogleChartsModule
   ],
   exports: [
     CommonModule,
     FormsModule,
     RouterModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    GoogleChartsModule
   ]
 })
 export class SharedModule { }

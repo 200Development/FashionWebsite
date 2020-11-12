@@ -7,6 +7,7 @@ import { ProductsModule } from './products/products.module';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { NavigationModule } from './navigation/navigation.module';
+import { MetricsModule } from './metrics/metrics.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavigationModule } from './navigation/navigation.module';
     HomeModule,
     AdminModule,
     ProductsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MetricsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

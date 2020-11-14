@@ -6,7 +6,6 @@ import { NavigationModule } from '../navigation/navigation.module';
 import { MetricsModule } from '../metrics/metrics.module';
 
 
-
 @NgModule({
   declarations: [
     AdminComponent

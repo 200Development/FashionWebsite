@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IProduct } from '../products/product';
+import { IProduct, Product } from '../products/product';
 import { ProductService } from '../products/products.service';
 
 @Component({
@@ -10,12 +10,17 @@ import { ProductService } from '../products/products.service';
 export class AdminComponent implements OnInit {
 
   products: IProduct[];
+  model: Product = new Product("", "", 0.00, 0);
+
   errorMessage: string;
-  
+
   productName: string;
   productDescription: string;
   productPrice: number;
-  productAvailableInventory: number; 
+  productAvailableInventory: number;
+
+
+  productSaved: boolean;
 
   constructor(private productService: ProductService) { }
 
@@ -26,10 +31,10 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  saveNewProduct(): boolean {
-
-
-    return true;
+  saveNewProduct(): void {
+    this.productService
+      .addProduct(this.model)
+      .subscribe(product => this.products.push(product));
   }
 
 }

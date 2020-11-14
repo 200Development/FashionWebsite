@@ -13,7 +13,7 @@ import { NavigationModule } from '../navigation/navigation.module';
   imports: [
     SharedModule,
     ProductsRoutingModule,
-    NavigationModule    
+    NavigationModule
   ]
 })
 export class ProductsModule { }

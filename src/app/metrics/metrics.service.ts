@@ -8,7 +8,7 @@ import { ISalesGraphModel } from './sales-graph/sales-graph-model'
     providedIn: 'root'
 })
 export class MetricService {
-    private salesUrl = 'https://localhost:44378/sales/SalesGraph';
+    private salesUrl = 'http://localhost:54259/api/sales/graph';
     private httpOptions = {
         headers: new HttpHeaders({
             "Content-Type": "application/json"

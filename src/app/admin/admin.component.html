@@ -10,20 +10,20 @@
                         <h2 style="float: left; text-align: center;">Add Product</h2>
                     </div>
                     <div class="card-body">
-
                         <label>Name:</label>
-                        <input type="text" [(ngModel)]="productName" style="float: right">
+                        <input type="text" [(ngModel)]="model.productName" style="float: right">
 
                         <label>Description:</label>
-                        <input type="text" [(ngModel)]="productDescription" style="float: right">
+                        <input type="text" [(ngModel)]="model.description" style="float: right">
 
                         <label>Price:</label>
-                        <input type="number" [(ngModel)]="productPrice" style="float: right">
+                        <input type="number" [(ngModel)]="model.unitPrice" style="float: right">
 
                         <label>Available Inventory:</label>
-                        <input type="text" [(ngModel)]="productAvailableInventory" style="float: right; width: 150px;">
+                        <input type="number" [(ngModel)]="model.availableInventory" style="float: right; width: 150px;">
 
-                        <button class="btn btn-sm btn-primary" (click)="saveNewProduct()">Save</button>
+                        <button id="saveProductBtn" class="btn btn-sm btn-primary"
+                            (click)="saveNewProduct()">Save</button>
                     </div>
                 </div>
                 <div class="card" style="height: 400px; overflow-y: auto;">
@@ -34,15 +34,16 @@
                         <div class="card-deck" *ngFor="let product of products">
                             <div class="card" style="margin: 4px 0 0 0; padding: 4px">
                                 <div class="card-header">
-                                    <h4>{{product.name}}</h4>
+                                    <h5>{{product.productName}}</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h6>Available Inventory: <span class="badge">{{product.availableInventory}}</span>
+                                    </h6>
                                     <div>
                                         <input type="checkbox">
                                         Active?
                                     </div>
                                 </div>
-                                <div class="card-body">
-                                    <h6>Available Inventory: <span class="badge">{{product.availableInventory}}</span></h6>
-                                </div>                                
                             </div>
                         </div>
                     </div>
@@ -54,7 +55,7 @@
                 <div>
                     <sales-graph></sales-graph>
                 </div>
-            <!-- End Right Column -->
+                <!-- End Right Column -->
             </div>
         </div>
     </div>

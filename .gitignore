@@ -47,3 +47,6 @@ testem.log
 Thumbs.db
 
 
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/FashionWebsite/v16/.suo

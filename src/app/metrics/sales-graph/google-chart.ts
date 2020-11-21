@@ -1,7 +1,7 @@
 export interface IGoogleChart {
     title: string;
     type: string;
-    data: [];
+    data: any[];
     columnNames: string[];
     options: {};
     width: number;
